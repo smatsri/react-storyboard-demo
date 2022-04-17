@@ -10,8 +10,8 @@ export default {
 } as ComponentMeta<InputType>
 
 const Template: ComponentStory<InputType> = (props) => <Input {...props} />
-export const Username = Template.bind({})
-Username.args = {
+export const Text = Template.bind({})
+Text.args = {
   type: "text",
   label: "Username"
 }
