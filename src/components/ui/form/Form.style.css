@@ -1,0 +1,9 @@
+.control {
+  display: flex;
+  margin-top: 10px;
+  border:1px solid transparent;
+}
+
+.control.invalid {
+  border-color:red;
+}

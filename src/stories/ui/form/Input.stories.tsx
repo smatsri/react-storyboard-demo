@@ -10,8 +10,20 @@ export default {
 } as ComponentMeta<InputType>
 
 const Template: ComponentStory<InputType> = (props) => <Input {...props} />
-export const Default = Template.bind({})
-Default.args = {
+export const Username = Template.bind({})
+Username.args = {
   type: "text",
-  label:"username"
+  label: "Username"
+}
+
+export const Password = Template.bind({})
+Password.args = {
+  type: "password",
+  label: "Password"
+}
+
+export const Invalid = Template.bind({})
+Invalid.args = {
+  label:"email",
+  error:"invalid email address"
 }

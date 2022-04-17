@@ -10,5 +10,5 @@ const Template: ComponentStory<typeof LoginForm> = (args) => <LoginForm {...args
 
 export const Default = Template.bind({});
 Default.args = {
-  title:"simple form"
+  title:"My Login Form"
 }

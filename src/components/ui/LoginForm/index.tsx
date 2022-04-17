@@ -1,3 +1,5 @@
+import Form from "../form/Form"
+import Input from "../form/Input"
 import "./style.css"
 
 type LoginFormProps = {
@@ -7,10 +9,11 @@ const LoginForm = ({ title }: LoginFormProps) => {
 
   return (
     <div>
-      <div>{title}</div>
-      <form>
-        
-      </form>
+      <div className="title">{title}</div>
+      <Form>
+        <Input label="username" />
+        <Input label="password" type="password" />
+      </Form>
     </div>
   )
 }
