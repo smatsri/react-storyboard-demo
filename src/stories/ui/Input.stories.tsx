@@ -2,13 +2,13 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { userEvent } from "@storybook/testing-library";
 import { within } from "@testing-library/react";
 
-import Input from "../../../components/ui/form/Input"
-import { delay } from "../../../utils/general";
+import Input from "../../components/ui/form/Input"
+import { delay } from "../../utils/general";
 
 type InputType = typeof Input
 
 export default {
-  title: "UI/form/Input",
+  title: "UI/Input",
   component: Input
 } as ComponentMeta<InputType>
 
