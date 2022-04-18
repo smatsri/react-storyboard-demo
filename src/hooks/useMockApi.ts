@@ -1,25 +1,27 @@
 import { IApiService } from "../services/types"
 
 
-export const useApi = (): IApiService => {
+const useMockApi = (): IApiService => {
 
   return {
     login(req) {
       return new Promise(res => {
-        if(req.username === "tester") {
+        if (req.username === "tester") {
           res({
-            success: true, 
+            success: true,
             user: { username: "tester" }
           })
         } else {
           res({
-            success: false, 
+            success: false,
             error: "NotFound"
           })
         }
-        
+
       })
     }
   }
 }
+
+export default useMockApi;
 

@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Login from '../../components/pages/Login';
-import { useApi } from '../../hooks/useApi';
+import useMockApi from '../../hooks/useMockApi';
 import { ApiService } from '../../providers/ApiProvider';
 
 ApiService
@@ -11,7 +11,7 @@ export default {
 } as ComponentMeta<typeof Login>;
 
 const Template: ComponentStory<typeof Login> = (args) => {
-  const api = useApi()
+  const api = useMockApi()
   return (
     <ApiService.Provider value={api}>
       <Login />
