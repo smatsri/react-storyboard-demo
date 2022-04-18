@@ -21,6 +21,7 @@ const schema = yup.object({
 
 interface LoginFormProps extends Partial<Data> {
   title: string,
+  logginError?: string
   onSubmit?(data: any): void
 }
 const LoginForm = ({ title, onSubmit = ignore, username, password }: LoginFormProps) => {

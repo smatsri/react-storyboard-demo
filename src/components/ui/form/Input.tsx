@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useFormContext } from "react-hook-form";
-import { uuid } from "../../../utils"
+import { uuid } from "../../../utils/general"
 import "./Input.style.css"
 import classNames from "classnames";
 
