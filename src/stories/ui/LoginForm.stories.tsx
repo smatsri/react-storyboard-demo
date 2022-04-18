@@ -13,7 +13,7 @@ const Template: ComponentStory<typeof LoginForm> = (args) => <LoginForm {...args
 
 export const Default = Template.bind({});
 Default.args = {
-  title:"My Login Form",
+  title:"Login Form",
   username:"",
   password:""
 }
