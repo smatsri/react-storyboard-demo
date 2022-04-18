@@ -1,6 +1,6 @@
 import Form from "./form/Form"
 import Input from "./form/Input"
-import "./LoginForm/style.css"
+import "./LoginForm.css"
 import { ignore } from "../../utils/general";
 import { useLoginForm } from "../../hooks/useLoginForm";
 
@@ -33,7 +33,7 @@ const LoginForm = ({
           type="password"
           props={register("password")}
           error={errors.password?.message} />
-        <button type="submit" role="button">SEND</button>
+        <button type="submit">SEND</button>
         {logginError && <div><span data-testid="login-error">{logginError}</span></div>}
       </Form>
     </div>
