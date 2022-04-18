@@ -20,5 +20,3 @@ const Template: ComponentStory<typeof Login> = (args) => {
 };
 
 export const Default = Template.bind({});
-Default.args = {
-}

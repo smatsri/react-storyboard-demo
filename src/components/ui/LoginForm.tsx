@@ -6,51 +6,31 @@ import * as yup from "yup";
 import Form from "./form/Form"
 import Input from "./form/Input"
 import "./LoginForm/style.css"
+import { ignore } from "../../utils/general";
+import { useLoginForm } from "../../hooks/useLoginForm";
 
 type Data = {
   username: string
   password: string
 }
-
-const ignore = () => { }
-
-const schema = yup.object({
-  username: yup.string().required(),
-  password: yup.string().required()
-}).required();
-
 interface LoginFormProps extends Partial<Data> {
   title: string,
   logginError?: string
   onSubmit?(data: any): void
 }
-const LoginForm = ({ title, onSubmit = ignore, username, password }: LoginFormProps) => {
-  const init = useRef(false)
-  const {
-    register,
-    formState: { errors },
-    handleSubmit,
-    reset,
-    trigger } =
-    useForm({
-      defaultValues: { username, password },
-      resolver: yupResolver(schema)
-    });
-
-  useEffect(() => {
-    if (!init.current) {
-      init.current = true
-    } else {
-      reset({ username, password })
-      trigger()
-    }
-
-  }, [username, password])
+const LoginForm = ({
+  title,
+  onSubmit = ignore,
+  username, password,
+  logginError
+}: LoginFormProps) => {
+  
+  const {errors, onSumbit:_onSubmit, register} = useLoginForm(username, password, onSubmit)
 
   return (
     <div>
       <div className="title">{title}</div>
-      <Form onSubmit={handleSubmit(onSubmit)}>
+      <Form onSubmit={_onSubmit}>
         <Input name="username"
           props={register("username")}
           error={errors.username?.message} />
@@ -59,6 +39,7 @@ const LoginForm = ({ title, onSubmit = ignore, username, password }: LoginFormPr
           props={register("password")}
           error={errors.password?.message} />
         <button type="submit">SEND</button>
+        {logginError && <div>{logginError}</div>}
       </Form>
     </div>
   )
