@@ -3,11 +3,14 @@ import { FC } from "react"
 import "./Form.style.css"
 
 type Props = {
+  children?: any
+  onSubmit?(data: any): void
 }
 
-const Form:FC<any> = ({ children }) => {
+const Form: FC<Props> = ({ children, onSubmit }) => {
+
   return (
-    <form>
+    <form onSubmit={onSubmit}>
       {children}
     </form>
   );
