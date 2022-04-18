@@ -17,7 +17,7 @@ const Login = () => {
 
   }
   return (
-    <div>
+    <div data-testid="success-message">
       welcome {user?.username}
     </div>
   )

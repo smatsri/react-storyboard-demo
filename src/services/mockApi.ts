@@ -1,7 +1,7 @@
-import { IApiService } from "../services/types"
+import { IApiService } from "./types"
 
 
-const useMockApi = (): IApiService => {
+const mockApi = (): IApiService => {
 
   return {
     login(req) {
@@ -23,5 +23,5 @@ const useMockApi = (): IApiService => {
   }
 }
 
-export default useMockApi;
+export default mockApi;
 

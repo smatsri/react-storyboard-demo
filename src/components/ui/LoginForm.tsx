@@ -38,8 +38,8 @@ const LoginForm = ({
           type="password"
           props={register("password")}
           error={errors.password?.message} />
-        <button type="submit">SEND</button>
-        {logginError && <div>{logginError}</div>}
+        <button type="submit" role="button">SEND</button>
+        {logginError && <div><span data-testid="login-error">{logginError}</span></div>}
       </Form>
     </div>
   )

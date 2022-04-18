@@ -30,7 +30,7 @@ const Input = (
       invalid
     })}>
       <label htmlFor={id}>{label}</label>
-      <input {...props} id={id} type={type} />
+      <input {...props} id={id} type={type} data-testid={`in-${name}`} />
     </div>
   );
 }
