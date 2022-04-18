@@ -1,6 +1,9 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { userEvent } from "@storybook/testing-library";
+import { within } from "@testing-library/react";
 
 import Input from "../../../components/ui/form/Input"
+import { delay } from "../../../utils/general";
 
 type InputType = typeof Input
 
@@ -24,6 +27,11 @@ Password.args = {
 
 export const Invalid = Template.bind({})
 Invalid.args = {
-  label:"email",
+  name:"email",
   error:"invalid email address"
+}
+Invalid.play = async ({ args, canvasElement }: any) => {
+  const canvas = within(canvasElement);
+  await delay(0)
+  userEvent.type(canvas.getByTestId('in-email'), 'my invalid email');
 }

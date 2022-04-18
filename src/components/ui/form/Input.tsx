@@ -1,5 +1,4 @@
 import { useState } from "react"
-import { useFormContext } from "react-hook-form";
 import { uuid } from "../../../utils/general"
 import "./Input.style.css"
 import classNames from "classnames";
@@ -25,12 +24,15 @@ const Input = (
   const invalid = !!error
   label = label || name
   return (
-    <div className={classNames({
-      control: true,
-      invalid
-    })}>
+    <div className={classNames(
+      {
+        control: true,
+        invalid
+      })}
+      data-testid={`ctr-${name}`} >
       <label htmlFor={id}>{label}</label>
       <input {...props} id={id} type={type} data-testid={`in-${name}`} />
+      {invalid && <span data-testid={`err-${name}`}>{error}</span>}
     </div>
   );
 }
