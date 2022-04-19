@@ -1,4 +1,5 @@
 import { ITodoItem } from "./types";
+import "./TodoItem.style.css"
 
 interface TodoItemProps extends ITodoItem {
   setCompleted(value: boolean): void

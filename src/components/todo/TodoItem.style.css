@@ -1,0 +1,10 @@
+.item {
+  display: flex;
+  align-items: center;
+  font-size: 1.3em;
+}
+
+.item > input {
+  margin-right: 10px;
+  cursor: pointer;
+}

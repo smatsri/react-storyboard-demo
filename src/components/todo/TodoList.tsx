@@ -1,10 +1,23 @@
+import List from "../ui/List";
+import TodoItem from "./TodoItem";
+import { ignore } from "../../utils/general";
+import { ITodoItem } from "./types";
+
 type TodoListProps = {
-  children: any[]
+  items: ITodoItem[]
+  setCompleted?(id: number, value: boolean): void
 }
 
-const TodoList = ({ children }: TodoListProps) => {
+const TodoList = ({ items, setCompleted = ignore }: TodoListProps) => {
+  
   return (
-    <ul></ul>
+    <List>
+      {items.map(item => (
+        <TodoItem
+          {...item}
+          setCompleted={value => setCompleted(item.id, value)} />
+      ))}
+    </List>
   );
 }
 
