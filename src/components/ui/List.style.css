@@ -1,0 +1,16 @@
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.list>.item {
+  padding: 10px;
+}
+
+.list>.item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
