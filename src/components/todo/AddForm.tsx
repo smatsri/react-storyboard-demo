@@ -1,15 +1,15 @@
+import { ignore } from "../../utils/general";
 import Form from "../ui/form/Form";
 import Input from "../ui/form/Input";
 import { useAddForm } from "./AddForm.hook";
 import { AddItemRequest } from "./types";
 
 type AddFormProps = {
-  onSubmit(req: AddItemRequest): void
+  onSubmit?(req: AddItemRequest): void
 }
 
-const AddForm = ({ onSubmit }: AddFormProps) => {
+const AddForm = ({ onSubmit = ignore }: AddFormProps) => {
   const { submit, register, errors } = useAddForm(onSubmit)
-  console.log(errors.title?.message);
 
   return (
     <Form onSubmit={(...args) => {
