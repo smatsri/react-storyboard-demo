@@ -24,9 +24,6 @@ export type FailedResponse = {
 }
 
 export type ApiResponse<T> = SuccessResponse<T> | FailedResponse
-
-
-
 export interface TodoService {
   getItems(): Promise<ITodoItem[]>
   addItem(req: AddItemRequest): Promise<ApiResponse<ITodoItem>>
