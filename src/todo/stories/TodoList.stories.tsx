@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import TodoList from "./TodoList"
+import TodoList from "../components/TodoList"
 
 type TodoListProps = typeof TodoList
 const meta: ComponentMeta<TodoListProps> = {

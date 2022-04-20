@@ -1,5 +1,5 @@
 import AddForm from "./AddForm";
-import { useTodo } from "./Todo.hook";
+import { useTodo } from "../hooks/Todo.hook";
 import TodoList from "./TodoList";
 
 type TodoProps = {}

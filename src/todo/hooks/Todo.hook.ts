@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import { useTodoService } from "./Todo.context";
-import { AddItemRequest, ITodoItem } from "./types";
+import { useTodoService } from "../components/Todo.context";
+import { AddItemRequest, ITodoItem } from "../types";
 
 
 export const useTodo = () => {

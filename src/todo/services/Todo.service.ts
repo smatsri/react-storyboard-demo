@@ -1,4 +1,4 @@
-import { AddItemRequest, ApiResponse, ITodoItem, SetCompletedRequest, TodoService } from "./types"
+import { AddItemRequest, ApiResponse, ITodoItem, SetCompletedRequest, TodoService } from "../types"
 
 export const mockTodoService = (): TodoService => {
 

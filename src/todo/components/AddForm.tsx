@@ -1,8 +1,8 @@
+import Form from "../../components/ui/form/Form";
+import Input from "../../components/ui/form/Input";
 import { ignore } from "../../utils/general";
-import Form from "../ui/form/Form";
-import Input from "../ui/form/Input";
-import { useAddForm } from "./AddForm.hook";
-import { AddItemRequest } from "./types";
+import { useAddForm } from "../hooks/AddForm.hook";
+import { AddItemRequest } from "../types";
 
 type AddFormProps = {
   onSubmit?(req: AddItemRequest): void

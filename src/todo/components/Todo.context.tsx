@@ -1,5 +1,5 @@
 import { createContext, useContext } from 'react';
-import { TodoService } from './types';
+import { TodoService } from '../types';
 
 export const TodoContext = createContext<TodoService>(null as any)
 TodoContext.displayName = "TodoService";

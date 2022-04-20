@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import TodoItem from "./TodoItem";
+import TodoItem from "../components/TodoItem";
 
 type Props = typeof TodoItem
 

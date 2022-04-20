@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import AddForm from "./AddForm"
+import AddForm from "../components/AddForm"
 
 type AddFormProps = typeof AddForm
 const meta: ComponentMeta<AddFormProps> = {

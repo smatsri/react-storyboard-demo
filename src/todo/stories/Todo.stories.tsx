@@ -1,8 +1,7 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import Todo from "./Todo"
-import { TodoContext } from "./Todo.context";
-import { mockTodoService } from "./Todo.service";
-
+import Todo from "../components/Todo"
+import { TodoContext } from "../components/Todo.context";
+import { mockTodoService } from "../services/Todo.service";
 
 type TodoProps = typeof Todo
 const meta: ComponentMeta<TodoProps> = {
