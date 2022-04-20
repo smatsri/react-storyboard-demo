@@ -32,7 +32,7 @@ const Input = (
       data-testid={`ctr-${name}`} >
       <label htmlFor={id}>{label}</label>
       <input {...props} id={id} type={type} data-testid={`in-${name}`} />
-      {invalid && <span data-testid={`err-${name}`}>{error}</span>}
+      {invalid && <span className="error-message" data-testid={`err-${name}`}>{error}</span>}
     </div>
   );
 }

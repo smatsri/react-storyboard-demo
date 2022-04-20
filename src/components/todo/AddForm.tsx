@@ -10,18 +10,20 @@ type AddFormProps = {
 const AddForm = ({ onSubmit }: AddFormProps) => {
   const { submit, register, errors } = useAddForm(onSubmit)
   console.log(errors.title?.message);
-  
+
   return (
     <Form onSubmit={(...args) => {
       submit(...args)
-    }}>
-      <div style={{ display: "flex" }}>
-        <Input 
-          name="title" 
-          props={register("title")} 
+    }} vertical={true} >
+     
+        <Input
+          name="title"
+          props={register("title")}
           error={errors.title?.message} />
-        <button type="submit">ADD</button>
-      </div>
+        <div>
+          <button type="submit">ADD</button>
+        </div>
+      
     </Form>
   );
 }

@@ -1,14 +1,23 @@
-.control {
+.form-item {
   display: flex;
   margin-top: 10px;
   border:1px solid transparent;
+  position: relative;
 }
-
-.control.invalid {
+.form-item.invalid {
   border-color:red;
 }
 
 .form {
   display: flex;
   flex-direction: column;
+}
+.form.vertical {
+  flex-direction: row;
+}
+
+.error-message {
+  color: red;
+  display: block;
+  position: relative;
 }
