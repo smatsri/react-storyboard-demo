@@ -1,4 +1,3 @@
-import { log } from "../../utils/general";
 import "./List.style.css"
 
 type ListProps = {
@@ -6,7 +5,7 @@ type ListProps = {
 }
 
 const List = ({ children }: ListProps) => {
-  log(children)
+
   const items = !children ? [] : Array.isArray(children) ? children  : [children]
 
   if (items.length === 0) {

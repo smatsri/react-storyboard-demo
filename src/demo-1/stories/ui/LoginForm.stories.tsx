@@ -3,7 +3,8 @@ import { userEvent } from '@storybook/testing-library';
 import { waitFor, within } from '@testing-library/react';
 import { expect } from '@storybook/jest';
 import LoginForm from '../../components/ui/LoginForm';
-import { delay } from '../../utils/general';
+import { delay } from '../../../utils/general';
+
 export default {
   title: 'UI/LoginForm',
   component: LoginForm,

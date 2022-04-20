@@ -1,5 +1,5 @@
-import Form from "../../components/ui/form/Form";
-import Input from "../../components/ui/form/Input";
+import Form from "../../demo-1/components/ui/form/Form";
+import Input from "../../demo-1/components/ui/form/Input";
 import { ignore } from "../../utils/general";
 import { useAddForm } from "../hooks/AddForm.hook";
 import { AddItemRequest } from "../types";

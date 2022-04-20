@@ -1,7 +1,7 @@
 import TodoItem from "./TodoItem";
 import { ITodoItem } from "../types";
-import List from "../../components/ui/List";
 import { ignore } from "../../utils/general";
+import List from "../../demo-1/components/ui/List";
 
 type TodoListProps = {
   items: ITodoItem[]

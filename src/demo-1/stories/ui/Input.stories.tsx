@@ -1,9 +1,9 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { userEvent } from "@storybook/testing-library";
 import { within } from "@testing-library/react";
+import { delay } from "../../../utils/general";
 
 import Input from "../../components/ui/form/Input"
-import { delay } from "../../utils/general";
 
 type InputType = typeof Input
 

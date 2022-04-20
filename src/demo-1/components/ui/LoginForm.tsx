@@ -1,8 +1,9 @@
 import Form from "./form/Form"
 import Input from "./form/Input"
 import "./LoginForm.css"
-import { ignore } from "../../utils/general";
+
 import { useLoginForm } from "../../hooks/useLoginForm";
+import { ignore } from "../../../utils/general";
 
 type Data = {
   username: string

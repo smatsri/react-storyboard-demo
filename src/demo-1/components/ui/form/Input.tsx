@@ -1,7 +1,8 @@
 import { useState } from "react"
-import { uuid } from "../../../utils/general"
+
 import "./Input.style.css"
 import classNames from "classnames";
+import { uuid } from "../../../../utils/general";
 
 type InputProps = {
   type?: 'text' | 'password' | 'number'
